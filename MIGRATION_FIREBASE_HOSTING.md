@@ -130,9 +130,10 @@ Move the React frontend from the Spring Boot + Google Cloud Run container stack 
    - To add these, go to **Settings → Secrets and variables → Actions** in the GitHub repository.
    - The `VITE_FIREBASE_*` values are public Firebase config values, so they are stored as **Variables**, not secrets.
 
-3. [ ] **Test the workflow**
-   - Run the workflow manually from the Actions tab with `channel` set to a preview channel name (e.g., `ci-test`).
-   - Verify the deployment URL works and the live channel is updated only when `channel` is `live`.
+3. [x] **Test the workflow**
+   - Ran the workflow manually from the Actions tab with `channel` = `ci-test`.
+   - Preview URL: https://prime-focus-services--ci-test-kt7za2ib.web.app
+   - Verified the workflow builds the frontend with the correct Firebase config and deploys Firestore rules and hosting successfully.
 
 ## Phase 4: Parallel Testing (Firebase Hosting + Existing Cloud Run)
 
@@ -247,7 +248,7 @@ Move the React frontend from the Spring Boot + Google Cloud Run container stack 
 |-------|--------|-------|
 | Phase 1: Firebase Hosting Setup | Completed | Preview URL: https://prime-focus-services--preview-migration-oexm98dq.web.app |
 | Phase 2: Frontend Hardening | Completed | Firestore rules deployed; first-admin bootstrap documented |
-| Phase 3: GitHub Actions Workflow | In progress | Workflow created; secrets/variables documented; test pending |
+| Phase 3: GitHub Actions Workflow | Completed | Workflow tested; preview URL: https://prime-focus-services--ci-test-kt7za2ib.web.app |
 | Phase 4: Parallel Testing | Not started | |
 | Phase 5: Remove Spring Boot/Cloud Run | Not started | |
 | Phase 6: Final Verification | Not started | |
